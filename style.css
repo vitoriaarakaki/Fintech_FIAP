@@ -1,0 +1,73 @@
+/* ── Google Font import (fallback for local) ── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* ── Gradient utilities ── */
+.gradient-brand {
+  background: linear-gradient(135deg, #E879A8 0%, #C261D4 50%, #9B5CF6 100%);
+}
+
+.gradient-card {
+  background: linear-gradient(135deg, #E879A8 0%, #C97FD8 60%, #B49CF6 100%);
+}
+
+.gradient-avatar {
+  background: linear-gradient(135deg, #C261D4, #9B5CF6);
+}
+
+/* ── Badge: positive growth ── */
+.badge-green {
+  background-color: rgba(16, 185, 129, 0.2);
+  color: #10b981;
+}
+
+/* ── Navbar active state already handled via gradient-brand in HTML ── */
+
+/* ── Transaction row subtle divider ── */
+.transaction-row + .transaction-row {
+  border-top: 1px solid #f3f4fb;
+}
+
+/* ── Responsive: mobile bottom nav (optional visual polish) ── */
+@media (max-width: 767px) {
+  /* Compact header padding */
+  header .max-w-7xl {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* Make top summary cards stack */
+  .grid-cols-1 {
+    grid-template-columns: 1fr;
+  }
+
+  /* Ensure sidebar cards don't squish below transactions */
+  main .grid.lg\:grid-cols-3 > div:last-child {
+    gap: 1rem;
+  }
+}
+
+/* ── Smooth card hover ── */
+.bg-white.rounded-2xl {
+  transition: box-shadow 0.2s ease;
+}
+.bg-white.rounded-2xl:hover {
+  box-shadow: 0 4px 24px rgba(155, 92, 246, 0.08);
+}
+
+/* ── Button press effect ── */
+button:active {
+  transform: scale(0.98);
+}
+
+/* ── Scrollbar subtle styling ── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f3f4fb;
+}
+::-webkit-scrollbar-thumb {
+  background: #d8b4fe;
+  border-radius: 99px;
+}
